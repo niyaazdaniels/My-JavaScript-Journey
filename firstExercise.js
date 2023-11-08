@@ -55,6 +55,17 @@ console.log(`${x} remainder ${y}`);
     let string = 'Matthew';
     let array = ['mcdonals','kfc', 'burger king','nandos', 'spur'];
     
+    const ooject = {
+        name: 'Daanyaal',
+        surname: 'Girls',
+        ages: 87,
+        areas: 'South Side'
+    }
+
+    let {name, surname, ages, areas} = ooject;
+
+    console.log(ooject);
+
 // 2. Once you’ve created the variables, display them to the console
 
 console.log(integer);
