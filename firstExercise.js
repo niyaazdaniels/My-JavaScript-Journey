@@ -3,7 +3,8 @@
 //          You should not have any issues, if you are having issues, go back to the git note or ask your friend 
 //          before asking your lecturer for help.(You cannot forget git commands)
 // STEP2.   Every push to github must be to a branch and a pull request has to be made to merge the branch with main. 
-//          Any pushes to main will result in you having to restart from the beginning(from creating a repo).
+//          Any pushes to main will result in you having to restart from the beginning(from creating a repo). 
+            [done]
 // STEP3.   Follow the order : 1 create repo, 2 run all commands necessary to link these to folders, 
 //          3 create and work on branch, 4 push branch and use a pull request to merge. 5 PULL YOUR CODE TO LOCAL REPO BEFORE CREATING ANOTHER BRANCH
 // STEP4.   You must link this javascript file to an index.html page, taking FOLDER STRUCTURE into consideration.
