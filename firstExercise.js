@@ -26,12 +26,23 @@
 // Write the following to the console using CONCATENATION and BACKTICKS: 
 // “The area of the rectangle is …” where … is the area you calculated.
 console.log(`the area of the rectangle is ${area}`);
+// or
+console.log(`the area of the rectangle is ` + area);
 
 // 3.Create two variables called “num1” and “num2.” Assign each variable a value of 10 and 4 respectfully.
 // Calculate and display in the console what the remainder is if num1 is divided by num2.
 
 let num1 = 10;
 let num2 = 4;
+
+// or
+
+console.log(10%4);
+
+//or
+
+console.log(`${num1} / ${num2}`);
+
 
 console.log(num1 % num2);
 console.log(num1 / num2);
@@ -46,12 +57,19 @@ let y = num1 % num2;
 
 console.log(`${x} remainder ${y}`);
 
+
+//or
+let answer = Math.floor(10/4);
+
+console.log(`${num1} / ${num2} = ${answer} remainder ${10%4} ${10%4}`);
+
+
 // B. Task 2:Data Types
 // 1. Define the following data types with your own contents
 // [ 'integer', 'decimal', 'string', 'array'(minimum: 3 items), 'Object'(minimum: 4 values)]
 
-    let integer = -1;
-    let decimal = 1.1;
+    let integer = -1; //any number that is whole 
+    let decimal = 1.1; //referred to as a float when it is a decimal
     let string = 'Matthew';
     let array = ['mcdonals','kfc', 'burger king','nandos', 'spur'];
     
@@ -92,6 +110,9 @@ console.log(typeof somethingNice);
 let age = null;
 let price;
 
+//const has to have a value so you wouldn't be able to no declare.
+
+
 // ***********C. Task 3. functions and contional statements************
 // N.B. READ WITH UNDERSTANDING!!!
 //  1.  Create 3 functions to convert R1000 into dollars, euros and pounds. Take function naming into consideration!
@@ -101,6 +122,8 @@ function dollarConvert () {
     let dollarCurrency = 18.42;
     let zarUsd = Math.round(randAmount / dollarCurrency);
     console.log(`Converted Currency is R${zarUsd}`);
+
+   
 }
 dollarConvert();
 
@@ -109,14 +132,55 @@ function euroConvert ( ){
     let euroCurrency = 19.72;
     let euroZar = Math.trunc(randAmount / euroCurrency);
     console.log(`Converted Curency is R${euroZar}`);
+
+     /*
+    function euroConvert () {
+        let answer = 1000 * 0.05;
+        return answer
+
+        or
+
+        console.log(answer);
+    }
+
+    to call function 
+    euroCovert();
+    */
+
+    /*
+    function covertEuro(a.b){
+        let answer = a*b;
+        return answer
+    }
+    covertEuro (1000*0.05);
+    */
 }
 euroConvert();
 
 function poundCovert(){
     let randAmount = 1000;
     let poundCurrency = 22.66;
-    let poundZar = Math.trunc(randAmount / poundCurrency);
+    let poundZar = Math.toFixed(2(randAmount / poundCurrency));
     console.log(`Converted Currency is R${poundCurrency}`);
+
+    /*
+    or
+
+    let x = 1000;
+    let y = 0.044;
+
+    function covertPound (x,){
+        let answer = a / b ;
+        return answer
+    }
+    convertPound(x, 22.84);
+    */
+
+    /*
+    let answer = Math.round(a / b * 100) /100;
+    return answer
+    */
+    
 }
 poundCovert();
 
@@ -128,6 +192,17 @@ poundCovert();
         let vatAmount = 15;
         let calculatedAmount = (amountEntered * vatAmount) / 100;
         console.log(`The Amount of Tax is R${calculatedAmount + amountEntered}`);
+
+        /*
+        OR
+
+        function VAT(){
+            let answer = (400 * 115) / 100;
+            let answer2 = 400*0.015;
+
+            return answer2 + 400
+        }
+        */
     }
     calculateVat();
 
@@ -138,12 +213,26 @@ poundCovert();
         let num2nd = 20; 
         let num3rd = 14;
 
+        display(num1st, num2nd)
+        function display(num1st, num2nd){
         if (num1st>num2nd) {
-            console.log(`Num1st is Greater`);
+            console.log(num1st);
         } else {
-            console.log(`Num2nd is Greater`);
-            
+            console.log(num2nd);
         }
+    }
+
+        /*
+        display (num1st, num2nd)
+        function display(num1st, num2nd){
+            if (num1st>num2nd){
+                console.log(num1st);
+            } else {
+                console.log(num2nd);
+            }
+        }
+        */
+
 
 //  4.  Write a function that determines whether “num1” is odd or even and displays the
 //      result. (Tip: remember the modulus operator %)
@@ -156,6 +245,15 @@ poundCovert();
             }
         }
         oddEven();
+
+        /*
+        function oddOrEven (){
+            if(num1st%2 >= 1)
+            console.log('odd');
+        }else {
+            console.log('even');
+        }
+        */
 
 //  5.  Next, write a JavaScript conditional statement to sort the three numbers(1stNum, 2ndNum, 3rdNum) from largest to smallest.
         if (num1st>num2nd && num1>num3rd){
@@ -172,11 +270,35 @@ poundCovert();
                 console.log(`${num2nd}, ${num3rd}, ${num1st}`);
             }
         }
-        else if (num3rd>num1st && num3rd>num2nd){
+        else {
             if (num1st>num2nd){
                 console.log(`${num3rd}, ${num1st}, ${num2nd}`);
             }else {
                 console.log(`${num3rd}, ${num2nd}, ${num1st}`);
             }
         }
+
+        /*
+        if (num1st > num2nd && num1st > num3rd){
+            if (num2nd>num3rd){
+                    console.log(`${num1st}, ${num2nd}, ${num3rd})`;
+            }else {
+                console.log(`${num1st}, ${num3nd}, ${num2rd})`;
+            }
+        } else if (num2nd>num1st && num2nd>num3rd){
+            if (num1st > num3rd){
+                 console.log(`${num2nd}, ${num1st}, ${num3rd})`;
+            }else {
+                  console.log(`${num2nd}, ${num3rd}, ${num1st})`;
+            }
+             else {
+            if (num1st>num2nd){
+                console.log(`${num3rd}, ${num1st}, ${num2nd}`);
+            }else {
+                console.log(`${num3rd}, ${num2nd}, ${num1st}`);
+            }
+        }// we don't need to run another else if because 3rd is the last 
+ 
+        }
+        */
            
